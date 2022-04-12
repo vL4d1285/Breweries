@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		D08E1F212804BE25001B4E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F202804BE25001B4E52 /* AppDelegate.swift */; };
 		D08E1F232804BE25001B4E52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F222804BE25001B4E52 /* SceneDelegate.swift */; };
-		D08E1F252804BE25001B4E52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F242804BE25001B4E52 /* ViewController.swift */; };
+		D08E1F252804BE25001B4E52 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F242804BE25001B4E52 /* DetailViewController.swift */; };
 		D08E1F282804BE25001B4E52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08E1F262804BE25001B4E52 /* Main.storyboard */; };
 		D08E1F2A2804BE26001B4E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08E1F292804BE26001B4E52 /* Assets.xcassets */; };
 		D08E1F2D2804BE26001B4E52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08E1F2B2804BE26001B4E52 /* LaunchScreen.storyboard */; };
+		D08E1F352804BE60001B4E52 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F342804BE60001B4E52 /* Brewery.swift */; };
+		D08E1F3B2804C412001B4E52 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F3A2804C412001B4E52 /* NetworkManager.swift */; };
+		D0C8CD092805F5B600061505 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8CD082805F5B600061505 /* MainTableViewController.swift */; };
+		D0C8CD0B2805FAD500061505 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8CD0A2805FAD500061505 /* MapViewController.swift */; };
+		D0C8CD0D2805FAF600061505 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8CD0C2805FAF600061505 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D08E1F1D2804BE25001B4E52 /* Breweries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breweries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08E1F202804BE25001B4E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D08E1F222804BE25001B4E52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D08E1F242804BE25001B4E52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D08E1F242804BE25001B4E52 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D08E1F272804BE25001B4E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D08E1F292804BE26001B4E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08E1F2C2804BE26001B4E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D08E1F2E2804BE26001B4E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D08E1F342804BE60001B4E52 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		D08E1F3A2804C412001B4E52 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D0C8CD082805F5B600061505 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D0C8CD0A2805FAD500061505 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D0C8CD0C2805FAF600061505 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		D08E1F1F2804BE25001B4E52 /* Breweries */ = {
 			isa = PBXGroup;
 			children = (
-				D08E1F202804BE25001B4E52 /* AppDelegate.swift */,
-				D08E1F222804BE25001B4E52 /* SceneDelegate.swift */,
-				D08E1F242804BE25001B4E52 /* ViewController.swift */,
-				D08E1F262804BE25001B4E52 /* Main.storyboard */,
-				D08E1F292804BE26001B4E52 /* Assets.xcassets */,
-				D08E1F2B2804BE26001B4E52 /* LaunchScreen.storyboard */,
+				D08E1F362804C3B9001B4E52 /* Models */,
+				D0C8CD0E2805FB0A00061505 /* ViewControllers */,
+				D08E1F382804C3E9001B4E52 /* Services */,
+				D0C8CD112805FBA200061505 /* SupportingFiles */,
+				D0C8CD0F2805FB2100061505 /* Storyboards */,
+				D0C8CD102805FB6300061505 /* Sourse */,
 				D08E1F2E2804BE26001B4E52 /* Info.plist */,
 			);
 			path = Breweries;
+			sourceTree = "<group>";
+		};
+		D08E1F362804C3B9001B4E52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D08E1F342804BE60001B4E52 /* Brewery.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D08E1F382804C3E9001B4E52 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D08E1F3A2804C412001B4E52 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D0C8CD0E2805FB0A00061505 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0C8CD082805F5B600061505 /* MainTableViewController.swift */,
+				D08E1F242804BE25001B4E52 /* DetailViewController.swift */,
+				D0C8CD0A2805FAD500061505 /* MapViewController.swift */,
+				D0C8CD0C2805FAF600061505 /* FavoritesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D0C8CD0F2805FB2100061505 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D08E1F262804BE25001B4E52 /* Main.storyboard */,
+				D08E1F2B2804BE26001B4E52 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D0C8CD102805FB6300061505 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				D08E1F292804BE26001B4E52 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		D0C8CD112805FBA200061505 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D08E1F202804BE25001B4E52 /* AppDelegate.swift */,
+				D08E1F222804BE25001B4E52 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D08E1F252804BE25001B4E52 /* ViewController.swift in Sources */,
+				D08E1F352804BE60001B4E52 /* Brewery.swift in Sources */,
+				D08E1F252804BE25001B4E52 /* DetailViewController.swift in Sources */,
+				D0C8CD0D2805FAF600061505 /* FavoritesViewController.swift in Sources */,
+				D08E1F3B2804C412001B4E52 /* NetworkManager.swift in Sources */,
 				D08E1F212804BE25001B4E52 /* AppDelegate.swift in Sources */,
+				D0C8CD092805F5B600061505 /* MainTableViewController.swift in Sources */,
 				D08E1F232804BE25001B4E52 /* SceneDelegate.swift in Sources */,
+				D0C8CD0B2805FAD500061505 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +374,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
