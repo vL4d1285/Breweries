@@ -7,21 +7,25 @@
 
 import Foundation
 
-struct Brewery {
-    let name: String
-    let breweryType: String
-    let street: String
-    let city: String
-    let state: String
-    let country: String
-    let longitude: String
-    let latitude: String
-    let phone: String
-    let websiteUrl: String
-    
-    
-      
-
+struct Brewery: Decodable {
+    let id: String?
+    let name: String?
+    let brewery_type: String?
+    let street: String?
+    let address_2: String?
+    let address_3: String?
+    let city: String?
+    let state: String?
+    let county_province: String?
+    let postal_code: String?
+    let country: String?
+    let longitude: String?
+    let latitude: String?
+    let phone: String?
+    let website_url: String?
+    let updated_at: String?
+    let created_at: String?
+       
 }
 
 enum Links: String {

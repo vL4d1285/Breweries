@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D02252112806E81E0055EEF0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02252102806E81E0055EEF0 /* TableViewCell.swift */; };
 		D08E1F212804BE25001B4E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F202804BE25001B4E52 /* AppDelegate.swift */; };
 		D08E1F232804BE25001B4E52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F222804BE25001B4E52 /* SceneDelegate.swift */; };
 		D08E1F252804BE25001B4E52 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F242804BE25001B4E52 /* DetailViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D02252102806E81E0055EEF0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D08E1F1D2804BE25001B4E52 /* Breweries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breweries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08E1F202804BE25001B4E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D08E1F222804BE25001B4E52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D02252122806E8530055EEF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D02252102806E81E0055EEF0 /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D08E1F142804BE25001B4E52 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 			children = (
 				D08E1F362804C3B9001B4E52 /* Models */,
 				D0C8CD0E2805FB0A00061505 /* ViewControllers */,
+				D02252122806E8530055EEF0 /* Views */,
 				D08E1F382804C3E9001B4E52 /* Services */,
 				D0C8CD112805FBA200061505 /* SupportingFiles */,
 				D0C8CD0F2805FB2100061505 /* Storyboards */,
@@ -204,6 +215,7 @@
 				D08E1F352804BE60001B4E52 /* Brewery.swift in Sources */,
 				D08E1F252804BE25001B4E52 /* DetailViewController.swift in Sources */,
 				D0C8CD0D2805FAF600061505 /* FavoritesViewController.swift in Sources */,
+				D02252112806E81E0055EEF0 /* TableViewCell.swift in Sources */,
 				D08E1F3B2804C412001B4E52 /* NetworkManager.swift in Sources */,
 				D08E1F212804BE25001B4E52 /* AppDelegate.swift in Sources */,
 				D0C8CD092805F5B600061505 /* MainTableViewController.swift in Sources */,
