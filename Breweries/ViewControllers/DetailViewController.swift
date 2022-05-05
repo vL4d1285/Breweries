@@ -9,8 +9,6 @@ import UIKit
 import MapKit
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet var nameOutlet: UILabel!
     
     @IBOutlet var typeOutlet: UILabel!
     @IBOutlet var phoneOutlet: UILabel!
@@ -26,13 +24,13 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameOutlet.text = brewery.name
         typeOutlet.text = brewery.brewery_type
         phoneOutlet.text = brewery.phone
         locationOutlet.text = brewery.street
         
+        setupNavigationBar()
         setupWebsiteLink(websiteOutlet)
-                        
+                       
     }
 
     @IBAction func button() {
@@ -41,9 +39,11 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
-    
-    
+    private func setupNavigationBar() {
+        navigationItem.title = brewery.name
+        navigationItem.enableMultilineTitle()
+    }
+  
     private func setupWebsiteLink(_ link: UIButton) {
         // remake, remove !
         link.setTitle(brewery.website_url, for: .normal)
@@ -52,7 +52,16 @@ class DetailViewController: UIViewController {
             link.titleLabel!.leadingAnchor.constraint(
                 equalTo: link.leadingAnchor)])
     }
-    
-    
+        
 }
+
+extension UINavigationItem {
+    func enableMultilineTitle() {
+          setValue(true, forKey: "__largeTitleTwoLineMode")
+       }
+}
+
+
+
+
 
