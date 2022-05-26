@@ -25,9 +25,19 @@ struct Brewery: Decodable {
     let website_url: String?
     let updated_at: String?
     let created_at: String?
-       
+    
+    var description: String {"""
+\(brewery_type ?? "")
+
+\(street ?? "") \(city ?? "") \(state ?? "")
+\(country ?? "")
+
+phone: \(phone ?? "")
+"""
+    }    
 }
 
 enum Links: String {
     case list = "https://api.openbrewerydb.org/breweries"
+    case update = "https://api.openbrewerydb.org/breweries?page="
 }

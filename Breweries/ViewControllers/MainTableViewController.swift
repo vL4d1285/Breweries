@@ -10,19 +10,15 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     var breweries: [Brewery] = []
-            
+         
+    var page = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.fetchBreweries(from: Links.list.rawValue) { result in
-            switch result {
-            case .success(let breweries):
-                self.breweries = breweries
-                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-        }
+        configureRefreshControl()        
+        loadBreweries(from: Links.list.rawValue)
+        
     }
 
     // MARK: - Table view data source
@@ -46,6 +42,46 @@ class MainTableViewController: UITableViewController {
         let detailVC = segue.destination as! DetailViewController
         detailVC.brewery = brewery 
     }
-
-
+        
+    private func loadBreweries(from link: String) {
+        NetworkManager.shared.fetchBreweries(from: link) { result in
+            switch result {
+            case .success(let breweries):
+                self.breweries = breweries
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+        
+    private func configureRefreshControl() {
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(
+            self,
+            action: #selector(handleRefreshControl),
+            for: .valueChanged
+        )
+    }
+    
+    @objc func handleRefreshControl() {
+        page += 1
+        let url = Links.update.rawValue + "\(page)"
+        loadBreweries(from: url)
+        tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
+    }
 }
+
+
+/*
+extension MainTableViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        
+    }
+    
+    
+    
+    
+}
+*/

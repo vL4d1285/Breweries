@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreVideo
 
 enum NetworkError: Error {
     case invalidURL
