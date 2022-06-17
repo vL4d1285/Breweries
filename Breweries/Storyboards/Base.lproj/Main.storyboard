@@ -18,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.99011284109999997" blue="0.96877855059999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="nPU-xp-BNA" customClass="TableViewCell" customModule="Breweries">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" rowHeight="90" id="nPU-xp-BNA" customClass="TableViewCell" customModule="Breweries">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nPU-xp-BNA" id="5bd-mI-PC5">
@@ -56,12 +56,11 @@
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IH-TF-BMr">
                                             <rect key="frame" x="362" y="39" width="47" height="40"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
-                                                <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </buttonConfiguration>
+                                            <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
                                             <connections>
-                                                <action selector="favoriteButtonAction" destination="nPU-xp-BNA" eventType="touchUpInside" id="G7Z-tU-dMl"/>
+                                                <action selector="favoriteButtonAction" destination="nPU-xp-BNA" eventType="touchUpInside" id="eJk-qn-PdG"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -78,6 +77,7 @@
                                 <connections>
                                     <outlet property="addressOutlet" destination="mAF-h7-dic" id="Jsv-Kr-cTJ"/>
                                     <outlet property="cityOutlet" destination="Pmd-vn-rb6" id="nnQ-jK-SDs"/>
+                                    <outlet property="favoriteButtonOutlet" destination="5IH-TF-BMr" id="Z2h-mv-8td"/>
                                     <outlet property="nameOutlet" destination="t4H-ox-nnR" id="ZE2-Nv-Rta"/>
                                     <outlet property="typeOutlet" destination="nX2-Q1-kpg" id="ESl-4S-mNQ"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="06t-EM-o6w"/>
@@ -188,7 +188,9 @@
                             <constraint firstItem="W5I-XW-YjM" firstAttribute="top" secondItem="qzv-9M-VgC" secondAttribute="bottom" constant="20" id="vNH-DP-CsR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8tt-Jv-u4X"/>
+                    <navigationItem key="navigationItem" id="8tt-Jv-u4X">
+                        <barButtonItem key="rightBarButtonItem" image="star" catalog="system" id="qzj-Ol-ld8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionOutlet" destination="g1Y-iz-2oi" id="STz-rJ-hDO"/>
                         <outlet property="mapView" destination="W5I-XW-YjM" id="dtf-40-pXC"/>
@@ -197,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322.5" y="-295.77464788732397"/>
+            <point key="canvasLocation" x="-323.1884057971015" y="-295.98214285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lsC-zP-CSF">
@@ -211,12 +213,12 @@
                     <connections>
                         <segue destination="Ump-PS-2dX" kind="relationship" relationship="viewControllers" id="0Hc-1c-Jry"/>
                         <segue destination="92A-4W-ndw" kind="relationship" relationship="viewControllers" id="UOK-D4-KWn"/>
-                        <segue destination="POF-ZK-6eC" kind="relationship" relationship="viewControllers" id="oD0-gF-sfQ"/>
+                        <segue destination="Glk-eJ-ZfS" kind="relationship" relationship="viewControllers" id="Le0-QP-mmG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9o-vw-vsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2887" y="503"/>
+            <point key="canvasLocation" x="-3597" y="477"/>
         </scene>
         <!--On the map-->
         <scene sceneID="FaC-cz-VH6">
@@ -278,21 +280,62 @@
             </objects>
             <point key="canvasLocation" x="-1888.4057971014495" y="367.63392857142856"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="ZBt-fD-3oE">
+        <!--Favorite Breweries-->
+        <scene sceneID="y4k-ed-h5s">
             <objects>
-                <viewController id="POF-ZK-6eC" customClass="FavoritesViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MCF-YN-aMh">
+                <viewController id="YfH-wX-FkX" customClass="FavoriteViewController" customModule="Breweries" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pBk-fQ-Lb8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fla-cm-Y5y"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" selectedImage="star.fill" id="jtN-ol-exa"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="9UM-o8-T3l">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9UM-o8-T3l" id="2o1-5T-AkA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorite Breweries" id="DAY-q6-AbG">
+                        <barButtonItem key="rightBarButtonItem" title="clean all" style="plain" id="KOq-yV-Ac9">
+                            <connections>
+                                <action selector="cleanAction" destination="YfH-wX-FkX" id="U8O-7b-fjx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pBk-fQ-Lb8" id="dWe-31-NS8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yDT-tX-Dja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2i-hL-ctA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1888" y="1043"/>
+            <point key="canvasLocation" x="-1016" y="1073"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="USV-3B-Mzu">
+            <objects>
+                <navigationController id="Glk-eJ-ZfS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" selectedImage="star.fill" id="3h6-rO-VCa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ggr-8L-dLb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.27058823529999998" green="0.12549019610000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.27058823529999998" green="0.12549019610000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YfH-wX-FkX" kind="relationship" relationship="rootViewController" id="KsS-7A-ccL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3O-aI-8Fx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1888" y="1073"/>
         </scene>
     </scenes>
     <resources>

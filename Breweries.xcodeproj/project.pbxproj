@@ -16,9 +16,10 @@
 		D08E1F2D2804BE26001B4E52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08E1F2B2804BE26001B4E52 /* LaunchScreen.storyboard */; };
 		D08E1F352804BE60001B4E52 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F342804BE60001B4E52 /* Brewery.swift */; };
 		D08E1F3B2804C412001B4E52 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E1F3A2804C412001B4E52 /* NetworkManager.swift */; };
+		D0C083BE2840F48D006A8FD3 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C083BD2840F48D006A8FD3 /* FavoriteViewController.swift */; };
 		D0C8CD092805F5B600061505 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8CD082805F5B600061505 /* MainTableViewController.swift */; };
 		D0C8CD0B2805FAD500061505 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8CD0A2805FAD500061505 /* MapViewController.swift */; };
-		D0C8CD0D2805FAF600061505 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C8CD0C2805FAF600061505 /* FavoritesViewController.swift */; };
+		D0E28B10283FB6D800A2088C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E28B0F283FB6D800A2088C /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +34,11 @@
 		D08E1F2E2804BE26001B4E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D08E1F342804BE60001B4E52 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		D08E1F3A2804C412001B4E52 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D0B6B3B72849694F006023EE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0C083BD2840F48D006A8FD3 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		D0C8CD082805F5B600061505 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		D0C8CD0A2805FAD500061505 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		D0C8CD0C2805FAF600061505 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		D0E28B0F283FB6D800A2088C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		D08E1F142804BE25001B4E52 = {
 			isa = PBXGroup;
 			children = (
+				D0B6B3B72849694F006023EE /* README.md */,
 				D08E1F1F2804BE25001B4E52 /* Breweries */,
 				D08E1F1E2804BE25001B4E52 /* Products */,
 			);
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D08E1F3A2804C412001B4E52 /* NetworkManager.swift */,
+				D0E28B0F283FB6D800A2088C /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -110,7 +115,7 @@
 				D0C8CD082805F5B600061505 /* MainTableViewController.swift */,
 				D08E1F242804BE25001B4E52 /* DetailViewController.swift */,
 				D0C8CD0A2805FAD500061505 /* MapViewController.swift */,
-				D0C8CD0C2805FAF600061505 /* FavoritesViewController.swift */,
+				D0C083BD2840F48D006A8FD3 /* FavoriteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -214,11 +219,12 @@
 			files = (
 				D08E1F352804BE60001B4E52 /* Brewery.swift in Sources */,
 				D08E1F252804BE25001B4E52 /* DetailViewController.swift in Sources */,
-				D0C8CD0D2805FAF600061505 /* FavoritesViewController.swift in Sources */,
 				D02252112806E81E0055EEF0 /* TableViewCell.swift in Sources */,
 				D08E1F3B2804C412001B4E52 /* NetworkManager.swift in Sources */,
+				D0C083BE2840F48D006A8FD3 /* FavoriteViewController.swift in Sources */,
 				D08E1F212804BE25001B4E52 /* AppDelegate.swift in Sources */,
 				D0C8CD092805F5B600061505 /* MainTableViewController.swift in Sources */,
+				D0E28B10283FB6D800A2088C /* StorageManager.swift in Sources */,
 				D08E1F232804BE25001B4E52 /* SceneDelegate.swift in Sources */,
 				D0C8CD0B2805FAD500061505 /* MapViewController.swift in Sources */,
 			);

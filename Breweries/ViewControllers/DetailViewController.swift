@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
         setupUI()
         setupWebsiteLink(websiteOutlet)
         setupPlacemarkOnTheMap()
-            
     }
 
     @IBAction func urlLinkButton() {

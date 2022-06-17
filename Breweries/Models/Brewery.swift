@@ -5,9 +5,7 @@
 //  Created by Vladislav Ryabtsev on 11.04.2022.
 //
 
-import Foundation
-
-struct Brewery: Decodable {
+struct Brewery: Codable {
     let id: String?
     let name: String?
     let brewery_type: String?
@@ -25,7 +23,7 @@ struct Brewery: Decodable {
     let website_url: String?
     let updated_at: String?
     let created_at: String?
-    
+        
     var description: String {"""
 \(brewery_type ?? "")
 
@@ -39,5 +37,5 @@ phone: \(phone ?? "")
 
 enum Links: String {
     case list = "https://api.openbrewerydb.org/breweries"
-    case update = "https://api.openbrewerydb.org/breweries?page="
+    case page = "https://api.openbrewerydb.org/breweries?page="
 }
